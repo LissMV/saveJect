@@ -1,44 +1,26 @@
-<div>
+<body class="bg-red-500">
+<x-layout>
     <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
     <h1>Sign Up</h1>
     <form action="/register" method="Post">
         @csrf
 
     <div>
-        <label for="">Name</label>
-        <input type="text" name="name">
-        @error('name')
-        <span> {{ $message }} </span>
-        @enderror
+        <x-input rex="name" titulo="Nombre" tipo="text"/>
     </div>
-
     <div>
-        <label for="">Email</label>
-        <input type="text" name="email">
-        @error('email')
-        <span> {{ $message }} </span>
-        @enderror
+        <x-input rex="email" titulo="Ingresa tu Email" tipo="email"/>
     </div>
-
     <div>
-        <label for="">Password</label>
-        <input type="password" name="password">
-        @error('password')
-        <span> {{ $message }} </span>
-        @enderror
+        <x-input rex="password" titulo="Ingresa tu contraseña" tipo="password"/>
     </div>
-
     <div>
-        <label for="">Birthday</label>
-        <input type="date" name="birthday">
-        @error('birthday')
-        <span> {{ $message }} </span>
-        @enderror
+        <x-input rex="birthday" titulo="Birthday" tipo="date"/>
     </div>
-
     <div>
         <button type="submit">Create account</button>
     </div>
 
     </form>
-</div>
+</x-layout>
+</body>
