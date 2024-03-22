@@ -1,8 +1,8 @@
+<body class="bg-red-500">
 <x-layout>
     <!-- If you do not have a consistent goal in life, you can not live it in a consistent way. - Marcus Aurelius -->
-<div class="Justify-center">
-    <h1 class="text-4xl font-black">Sign In</h1>
-    <form action="/login" method="POST">
+    <h1 class="font-black text-4xl text-white text-center">Sign In</h1>
+    <form class="grid place-content-center mt-6" action="/login" method="POST">
         @csrf
     <div>
         <x-input rex="email" titulo="Ingresa tu Email" tipo="text"/>
@@ -13,5 +13,5 @@
 
     <button type="submit">Log In</button>
     </form>
-</div>
 </x-layout>
+</body>
