@@ -1,7 +1,8 @@
 <x-layout>
    <body>
       <style>
-         body {
+
+        body {
             background: url('https://i.pinimg.com/564x/94/57/53/94575326e5fbec9d470d1d4ff2dc3e27.jpg');
             background-size: cover;
             background-attachment: fixed;
@@ -18,10 +19,10 @@
          }
       </style>
    </body>
-   <div id="glassEffect" class="m-20 grid place-content-center mt-6">
+   <div id="glassEffect" class="mt-6 w-full max-w-md rounded-lg p-8">
 
      <h1 class="font-black text-4xl text-center">Sign In</h1>
-     <form class="" action="/login" method="POST">
+     <form action="/login" method="POST">
         @csrf
       <div>
         <x-input rex="email" titulo="Email" tipo="text"/>
@@ -29,7 +30,9 @@
       <div>
         <x-input rex="password" titulo="Password" tipo="password"/>
       </div>
-      <button type="submit">Log In</button>
+      <div>
+      <button  class="w-full bg-emerald-500 text-white font-semibold py-2 px-4 rounded-full hover:bg-emerald-600 focus:outline-none focus:bg-emerald-600" type="submit">Log In</button>
+      </div>
      </form>
 
   </div>

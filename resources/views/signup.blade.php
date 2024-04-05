@@ -1,6 +1,18 @@
-<body class="bg-red-500">
+
 <x-layout>
-    <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
+    <body class="bg-red-600">
+        <style>
+             #glass {
+            background: linear-gradient(135deg, rgba(225, 225, 225, 0.1), rgba(225, 225, 225, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(225, 225, 225, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0, 37);
+         }
+        </style>
+    </body>
+<div id="glass">
     <h1 class="font-black text-4xl text-white text-center">Sign Up</h1>
     <form class="grid place-content-center mt-6" action="/register" method="Post">
         @csrf
@@ -21,5 +33,5 @@
     </div>
 
     </form>
+</div>
 </x-layout>
-</body>
